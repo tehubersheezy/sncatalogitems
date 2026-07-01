@@ -1,0 +1,6 @@
+{
+  "scope": "global",
+  "scopeId": "ba48069772084127a01a82a5ecd04636",
+  "name": "SN Team Catalog",
+  "tsconfigPath": "./src/server/tsconfig.json"
+}
