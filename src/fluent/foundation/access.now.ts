@@ -22,6 +22,21 @@ export const activeEmployeeCriteria = Record({
     },
 })
 
+// Stage-1 approver pool for OAuth Client Registration governance. The source governance
+// transcript names a per-integration "Business Owner" as the stage-1 approver; resolving
+// that specific named individual dynamically from a catalog variable inside a Fluent flow
+// wasn't a pattern grounded in the SDK docs reviewed this session, so stage-1 approval
+// routes to this group in the interim -- populate it with actual application owners.
+export const applicationOwnersGroup = Record({
+    $id: Now.ID['sn_platform_app_owners_group'],
+    table: 'sys_user_group',
+    data: {
+        name: 'Application Owners',
+        description: 'Stage-1 approvers for OAuth Client Registration requests (business justification / ownership review)',
+        active: true,
+    },
+})
+
 export const platformTeamCriteria = Record({
     $id: Now.ID['sn_platform_uc_platform_team'],
     table: 'user_criteria',

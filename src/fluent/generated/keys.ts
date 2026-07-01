@@ -13,6 +13,10 @@ declare global {
                         table: 'sys_module'
                         id: '2b5c0236b63c4c19bbb538a4a22ce729'
                     }
+                    sn_platform_app_owners_group: {
+                        table: 'sys_user_group'
+                        id: 'af63559c8cb14091aeada4d64c4e6371'
+                    }
                     sn_platform_approval_fulfillment_flow: {
                         table: 'sys_hub_flow'
                         id: '83d31159cac448c6a888b177563760d8'
@@ -28,6 +32,10 @@ declare global {
                     sn_platform_cat_access_governance: {
                         table: 'sc_category'
                         id: '50fbe204283c403586d658095ad61f37'
+                    }
+                    sn_platform_cat_api_governance: {
+                        table: 'sc_category'
+                        id: '4c2c28430a2449df8c4fef31c6029fd0'
                     }
                     sn_platform_cat_dev_config: {
                         table: 'sc_category'
@@ -117,6 +125,10 @@ declare global {
                         table: 'sc_cat_item'
                         id: 'be70bb61266b4fafa76bea15bfe70c29'
                     }
+                    'sn_platform_ci_oauth-client-registration': {
+                        table: 'sc_cat_item'
+                        id: 'c080e0fa153a4b10937fa9e7a18bb885'
+                    }
                     'sn_platform_ci_performance-slowness-investigation': {
                         table: 'sc_cat_item'
                         id: '4533a9b3792942c3b7144c8e704be6bf'
@@ -144,6 +156,46 @@ declare global {
                     sn_platform_manager_approval: {
                         table: 'sys_hub_action_instance_v2'
                         id: '24a76231a44a4eab8e491d5e0ec49d4f'
+                    }
+                    sn_platform_oauth_governance_flow: {
+                        table: 'sys_hub_flow'
+                        id: '85007226b2bc4e4ba87ad0fd7f424c82'
+                    }
+                    sn_platform_oauth_governance_trigger: {
+                        table: 'sys_hub_trigger_instance_v2'
+                        id: '1b24756368f24afc86b288fecea79c86'
+                    }
+                    sn_platform_oauth_owner_approval: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: 'f75f323a0cf841f785322e45fe9be517'
+                    }
+                    sn_platform_oauth_owner_approved: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: 'de2bc1631c1f4143a8f02d5001255549'
+                    }
+                    sn_platform_oauth_platform_approval: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '7ef6dc2b2dea423ca5ea8c6e09c6367d'
+                    }
+                    sn_platform_oauth_platform_approved: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: 'd788743a72d040e0b728e19b8684bc77'
+                    }
+                    sn_platform_oauth_policy_decommission_reason: {
+                        table: 'catalog_ui_policy'
+                        id: 'ba2dd521f82945dcb528050eaee221ee'
+                    }
+                    sn_platform_oauth_policy_existing_client: {
+                        table: 'catalog_ui_policy'
+                        id: '52fc59dba0ba4244a2890a1a4b446f43'
+                    }
+                    sn_platform_oauth_policy_registration_fields: {
+                        table: 'catalog_ui_policy'
+                        id: '5f1ff0471ffc4bfaba2da172380f19c1'
+                    }
+                    sn_platform_oauth_provision_task: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '0d2416321e5e41f7983da264f82bd1e6'
                     }
                     sn_platform_team_group: {
                         table: 'sys_user_group'
@@ -253,6 +305,30 @@ declare global {
                         }
                     },
                     {
+                        table: 'question_choice'
+                        id: '07c3bc95f6124029a437b4d8edac554f'
+                        key: {
+                            question: {
+                                id: '09cc35663a024c8db8b43fc278558b0b'
+                                key: {
+                                    cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                                    variable_set: 'NULL'
+                                    name: 'request_type'
+                                }
+                            }
+                            value: 'register_service'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: '09cc35663a024c8db8b43fc278558b0b'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'request_type'
+                        }
+                    },
+                    {
                         table: 'item_option_new'
                         id: '0a8d8581b6c246c99c9dd5018c699541'
                         deleted: true
@@ -272,6 +348,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'catalog_ui_policy_action'
+                        id: '0e250420d8ec4c0da678e76683589c4e'
+                        key: {
+                            ui_policy: '5f1ff0471ffc4bfaba2da172380f19c1'
+                            catalog_variable: 'IO:6d99ca884d0848c39e2f7315c045753a'
+                        }
+                    },
+                    {
                         table: 'sc_cat_item_user_criteria_mtom'
                         id: '0ee3d38993bf4772990211167f9eda5b'
                         key: {
@@ -286,6 +370,15 @@ declare global {
                             cat_item: 'be70bb61266b4fafa76bea15bfe70c29'
                             variable_set: 'NULL'
                             name: 'target_table'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: '0f40f38f7674432eb8ef3c43ceeddca1'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'vendor'
                         }
                     },
                     {
@@ -340,6 +433,21 @@ declare global {
                             cat_item: 'd0839f28ef7540a48ff628b3be7115ae'
                             variable_set: 'NULL'
                             name: 'approving_manager'
+                        }
+                    },
+                    {
+                        table: 'question_choice'
+                        id: '12b16193d24e4006944ae6feb945c193'
+                        key: {
+                            question: {
+                                id: 'ab86442da532417aadfec76941340afd'
+                                key: {
+                                    cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                                    variable_set: 'NULL'
+                                    name: 'authentication_type'
+                                }
+                            }
+                            value: 'service_oauth'
                         }
                     },
                     {
@@ -509,6 +617,21 @@ declare global {
                     },
                     {
                         table: 'question_choice'
+                        id: '304f47d8f2e84ffc898aa5d7104325d3'
+                        key: {
+                            question: {
+                                id: '09cc35663a024c8db8b43fc278558b0b'
+                                key: {
+                                    cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                                    variable_set: 'NULL'
+                                    name: 'request_type'
+                                }
+                            }
+                            value: 'register_user'
+                        }
+                    },
+                    {
+                        table: 'question_choice'
                         id: '31384d91973f4b7ca430fdb6914fe0c5'
                         key: {
                             question: {
@@ -584,6 +707,15 @@ declare global {
                         key: {
                             sc_cat_item: '4533a9b3792942c3b7144c8e704be6bf'
                             sc_catalog: 'ec2949eb0bd14e0785abdc1170cb615d'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: '36c6881b9b68428ebe5b5a84df192566'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'decommission_reason'
                         }
                     },
                     {
@@ -716,6 +848,15 @@ declare global {
                     },
                     {
                         table: 'item_option_new'
+                        id: '3e36b0943a6447fc86c9e175884984af'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'existing_oauth_client'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
                         id: '3f3f7b76846d412d8caf441c6dcfa589'
                         key: {
                             cat_item: '8b74259ece774f65b14c2a7b82838b82'
@@ -829,6 +970,21 @@ declare global {
                         }
                     },
                     {
+                        table: 'question_choice'
+                        id: '5044e37d6c57420880331135d8b28857'
+                        key: {
+                            question: {
+                                id: '09cc35663a024c8db8b43fc278558b0b'
+                                key: {
+                                    cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                                    variable_set: 'NULL'
+                                    name: 'request_type'
+                                }
+                            }
+                            value: 'regenerate_secret'
+                        }
+                    },
+                    {
                         table: 'item_option_new'
                         id: '50b734719ab7470680f820f02cd8d4e8'
                         key: {
@@ -894,6 +1050,21 @@ declare global {
                     },
                     {
                         table: 'question_choice'
+                        id: '56cc2481d3f24c7d83ebc22c09fb0188'
+                        key: {
+                            question: {
+                                id: 'ab86442da532417aadfec76941340afd'
+                                key: {
+                                    cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                                    variable_set: 'NULL'
+                                    name: 'authentication_type'
+                                }
+                            }
+                            value: 'user_oauth'
+                        }
+                    },
+                    {
+                        table: 'question_choice'
                         id: '582fe54ac0d248a3895541b375f17976'
                         key: {
                             question: {
@@ -905,6 +1076,15 @@ declare global {
                                 }
                             }
                             value: 'report_generation'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: '5be7482ae28946f19139f25aee5be9e0'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'business_owner'
                         }
                     },
                     {
@@ -998,6 +1178,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'catalog_ui_policy_action'
+                        id: '61ec63f9edbd444d8a97de4c06cb393f'
+                        key: {
+                            ui_policy: '52fc59dba0ba4244a2890a1a4b446f43'
+                            catalog_variable: 'IO:3e36b0943a6447fc86c9e175884984af'
+                        }
+                    },
+                    {
                         table: 'question_choice'
                         id: '6348f66292d14ca89d3345b66c7fc8ba'
                         key: {
@@ -1062,6 +1250,30 @@ declare global {
                     },
                     {
                         table: 'item_option_new'
+                        id: '6d99ca884d0848c39e2f7315c045753a'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'expected_transaction_volume'
+                        }
+                    },
+                    {
+                        table: 'question_choice'
+                        id: '6eac44363e1f46a09d103f9d8e30e460'
+                        key: {
+                            question: {
+                                id: 'bbb84a5c6eb94403a481e869ade3ad7a'
+                                key: {
+                                    cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                                    variable_set: 'NULL'
+                                    name: 'environments'
+                                }
+                            }
+                            value: 'test'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
                         id: '6f44f40b97bb4789900a663a3ac55dc3'
                         key: {
                             cat_item: '71a6623ebee94bea9e24b90f66b4ca76'
@@ -1119,6 +1331,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'catalog_ui_policy_action'
+                        id: '729e50c48d8a41218b7ebe8b143d9e7f'
+                        key: {
+                            ui_policy: '5f1ff0471ffc4bfaba2da172380f19c1'
+                            catalog_variable: 'IO:ab86442da532417aadfec76941340afd'
+                        }
+                    },
+                    {
                         table: 'item_option_new'
                         id: '72bd288ed50441a59d701fd64caa59f9'
                         key: {
@@ -1151,6 +1371,14 @@ declare global {
                         key: {
                             sc_cat_item: 'd0296472e74f45e8af5f9b121b22c330'
                             sc_category: '1393fa29362247808961858773341b18'
+                        }
+                    },
+                    {
+                        table: 'catalog_ui_policy_action'
+                        id: '75b8165d35bd464697cc72843081cf92'
+                        key: {
+                            ui_policy: 'ba2dd521f82945dcb528050eaee221ee'
+                            catalog_variable: 'IO:36c6881b9b68428ebe5b5a84df192566'
                         }
                     },
                     {
@@ -1294,6 +1522,15 @@ declare global {
                             cat_item: '64a828110ef94023a0bb93bd3114c4d8'
                             variable_set: 'NULL'
                             name: 'affected_product'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: '81e777f1b7734c99ab4b908355f556ae'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'application_name'
                         }
                     },
                     {
@@ -1454,6 +1691,14 @@ declare global {
                         key: {
                             sc_cat_item: '4533a9b3792942c3b7144c8e704be6bf'
                             user_criteria: '0af5e38b32234774bab7ac7e451a8211'
+                        }
+                    },
+                    {
+                        table: 'catalog_ui_policy_action'
+                        id: '94be59f905504948acb54978e4d5b860'
+                        key: {
+                            ui_policy: '5f1ff0471ffc4bfaba2da172380f19c1'
+                            catalog_variable: 'IO:b4d767aafe434ecf909d47cbda3aba07'
                         }
                     },
                     {
@@ -1701,11 +1946,44 @@ declare global {
                         }
                     },
                     {
+                        table: 'item_option_new'
+                        id: 'aa3c5d5536ba43418d43d5eae154dc5f'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'required_roles'
+                        }
+                    },
+                    {
                         table: 'sc_cat_item_category'
                         id: 'aab4a94629a943e9a09e64223568ed7c'
                         key: {
                             sc_cat_item: '6ed6743ae66f411d9abb596d041b9622'
                             sc_category: 'd908481f7b0740058fe03043d6e097d8'
+                        }
+                    },
+                    {
+                        table: 'question_choice'
+                        id: 'ab7127b4b5624ff49323f990a72aa80f'
+                        key: {
+                            question: {
+                                id: 'bbb84a5c6eb94403a481e869ade3ad7a'
+                                key: {
+                                    cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                                    variable_set: 'NULL'
+                                    name: 'environments'
+                                }
+                            }
+                            value: 'prod'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: 'ab86442da532417aadfec76941340afd'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'authentication_type'
                         }
                     },
                     {
@@ -1752,6 +2030,15 @@ declare global {
                                 }
                             }
                             value: 'medium'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: 'b4d767aafe434ecf909d47cbda3aba07'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'apis_required'
                         }
                     },
                     {
@@ -1807,6 +2094,23 @@ declare global {
                     },
                     {
                         table: 'item_option_new'
+                        id: 'bbb84a5c6eb94403a481e869ade3ad7a'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'environments'
+                        }
+                    },
+                    {
+                        table: 'catalog_ui_policy_action'
+                        id: 'bf40c5ad4c0d4234aab9b315125c8248'
+                        key: {
+                            ui_policy: '5f1ff0471ffc4bfaba2da172380f19c1'
+                            catalog_variable: 'IO:f3422820ce164a33b00868aa0f408521'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
                         id: 'bfc15e22f841423f9177e521008853b0'
                         key: {
                             cat_item: '3b687d0106aa4300b69f0c75250ef43d'
@@ -1845,6 +2149,14 @@ declare global {
                             cat_item: 'd0839f28ef7540a48ff628b3be7115ae'
                             variable_set: 'NULL'
                             name: 'requested_for'
+                        }
+                    },
+                    {
+                        table: 'catalog_ui_policy_action'
+                        id: 'c4cdc4e925574a7190aee68bbf67d6fc'
+                        key: {
+                            ui_policy: '5f1ff0471ffc4bfaba2da172380f19c1'
+                            catalog_variable: 'IO:aa3c5d5536ba43418d43d5eae154dc5f'
                         }
                     },
                     {
@@ -1941,6 +2253,30 @@ declare global {
                         }
                     },
                     {
+                        table: 'item_option_new'
+                        id: 'cde38276feb04f10b2fc73f9635940b3'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'technical_owner'
+                        }
+                    },
+                    {
+                        table: 'question_choice'
+                        id: 'ce7ca37c7d3b470c8be5b4ef680e92ad'
+                        key: {
+                            question: {
+                                id: 'bbb84a5c6eb94403a481e869ade3ad7a'
+                                key: {
+                                    cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                                    variable_set: 'NULL'
+                                    name: 'environments'
+                                }
+                            }
+                            value: 'dev'
+                        }
+                    },
+                    {
                         table: 'question_choice'
                         id: 'd039ea83004f4486aa1a09dd8f2c6385'
                         key: {
@@ -1953,6 +2289,14 @@ declare global {
                                 }
                             }
                             value: 'trend'
+                        }
+                    },
+                    {
+                        table: 'sc_cat_item_catalog'
+                        id: 'd193a3929ce54e3b86612631fa10aae1'
+                        key: {
+                            sc_cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            sc_catalog: 'ec2949eb0bd14e0785abdc1170cb615d'
                         }
                     },
                     {
@@ -1981,10 +2325,33 @@ declare global {
                     },
                     {
                         table: 'sc_cat_item_user_criteria_mtom'
+                        id: 'd373da6e9b9b46e3ada56c70b28473fd'
+                        key: {
+                            sc_cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            user_criteria: '0af5e38b32234774bab7ac7e451a8211'
+                        }
+                    },
+                    {
+                        table: 'sc_cat_item_user_criteria_mtom'
                         id: 'd4633807ec02464292aadacce2344652'
                         key: {
                             sc_cat_item: 'ca5a419baad44d1eb077fe66864f65ba'
                             user_criteria: '0af5e38b32234774bab7ac7e451a8211'
+                        }
+                    },
+                    {
+                        table: 'question_choice'
+                        id: 'd49514cca94e483abc9209ee23acbbd7'
+                        key: {
+                            question: {
+                                id: '09cc35663a024c8db8b43fc278558b0b'
+                                key: {
+                                    cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                                    variable_set: 'NULL'
+                                    name: 'request_type'
+                                }
+                            }
+                            value: 'modify'
                         }
                     },
                     {
@@ -2274,6 +2641,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'catalog_ui_policy_action'
+                        id: 'ee7ba55e50e043b2a7582f2d681c709a'
+                        key: {
+                            ui_policy: '5f1ff0471ffc4bfaba2da172380f19c1'
+                            catalog_variable: 'IO:bbb84a5c6eb94403a481e869ade3ad7a'
+                        }
+                    },
+                    {
                         table: 'item_option_new'
                         id: 'ee8aba9fe8c84e72985233c0db7d1b59'
                         key: {
@@ -2301,6 +2676,21 @@ declare global {
                         }
                     },
                     {
+                        table: 'question_choice'
+                        id: 'f173a261dbf04775ac7cb4561e6a9a34'
+                        key: {
+                            question: {
+                                id: '09cc35663a024c8db8b43fc278558b0b'
+                                key: {
+                                    cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                                    variable_set: 'NULL'
+                                    name: 'request_type'
+                                }
+                            }
+                            value: 'decommission'
+                        }
+                    },
+                    {
                         table: 'item_option_new'
                         id: 'f20a238468f544fc955ad1d0abbfb9cb'
                         key: {
@@ -2315,6 +2705,15 @@ declare global {
                         key: {
                             sc_cat_item: '855e5f412a0b4c6d87b185efdce75f8f'
                             sc_catalog: 'ec2949eb0bd14e0785abdc1170cb615d'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: 'f3422820ce164a33b00868aa0f408521'
+                        key: {
+                            cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            variable_set: 'NULL'
+                            name: 'business_justification'
                         }
                     },
                     {
@@ -2363,6 +2762,14 @@ declare global {
                                 }
                             }
                             value: 'priority_4'
+                        }
+                    },
+                    {
+                        table: 'sc_cat_item_category'
+                        id: 'f8a8a674d55d442d97c14df0e579791d'
+                        key: {
+                            sc_cat_item: 'c080e0fa153a4b10937fa9e7a18bb885'
+                            sc_category: '4c2c28430a2449df8c4fef31c6029fd0'
                         }
                     },
                     {

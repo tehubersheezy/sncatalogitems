@@ -84,3 +84,13 @@ export const platformHealthCategory = Record({
         active: true,
     },
 })
+
+export const apiGovernanceCategory = Record({
+    $id: Now.ID['sn_platform_cat_api_governance'],
+    table: 'sc_category',
+    data: {
+        title: 'API Governance',
+        sc_catalog: platformCatalog,
+        active: true,
+    },
+})
